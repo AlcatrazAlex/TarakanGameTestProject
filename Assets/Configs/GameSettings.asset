@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a6bbeb7fa84d9f96c6f91592b96d42, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  _finishDistance: 2
+  _escapeAccelerationMultiplier: 2
+  _escapeSpeedMultiplier: 2
+  _options:
+  - OptionType: 0
+    OptionName: Speed
+    StartValue: 8
+    MinValue: 0
+    MaxValue: 15
+  - OptionType: 1
+    OptionName: Acceleration
+    StartValue: 6
+    MinValue: 0
+    MaxValue: 12
+  - OptionType: 2
+    OptionName: Cursor Radius
+    StartValue: 3
+    MinValue: 0
+    MaxValue: 10
