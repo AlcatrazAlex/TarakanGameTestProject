@@ -33,11 +33,11 @@ namespace TaranaGame.Tarakan
         #region SetUp 
 
         [Inject]
-        public void Init(GameSettings settings, Camera gameCamera)
+        public void Init(GameSettings settings)
         {
             _rb = GetComponent<Rigidbody2D>();
             _gameSettings = settings;
-            _gameCamera = gameCamera;
+            _gameCamera = Camera.main;
         }
 
         public void SetId(string id)

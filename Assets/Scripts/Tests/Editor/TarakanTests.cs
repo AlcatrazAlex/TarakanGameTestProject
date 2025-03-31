@@ -32,7 +32,7 @@ namespace TarakanGame.Tests
             _settings.EscapeSpeedMultiplier = 2f;
             _settings.EscapeAccelerationMultiplier = 2f;
             _rb = _tarakanObj.GetComponent<Rigidbody2D>();
-            _controller.Init(_settings, Camera.main);
+            _controller.Init(_settings);
         }
 
         [TearDown]

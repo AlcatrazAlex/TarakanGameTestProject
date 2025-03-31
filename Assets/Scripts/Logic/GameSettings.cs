@@ -12,7 +12,7 @@ namespace TaranaGame.Logic
         public float EscapeSpeedMultiplier { get; set; }
         public float FinishDistance { get; set; }
 
-        public GameSettings(GameSettingsConfig gameSettingsConfig)
+        public void InitGameSettingsFromConfig(GameSettingsConfig gameSettingsConfig)
         {
             foreach (var value in gameSettingsConfig.Options)
                 SetOption(value.OptionType, value.StartValue);
@@ -21,8 +21,6 @@ namespace TaranaGame.Logic
             EscapeSpeedMultiplier = gameSettingsConfig.EscapeSpeedMultiplier;
             FinishDistance = gameSettingsConfig.EscapeSpeedMultiplier;
         }
-        
-        public GameSettings() {}
         
         public void SetOption(OptionType type, float value)
         {

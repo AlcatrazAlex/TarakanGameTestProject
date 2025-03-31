@@ -24,11 +24,12 @@ namespace TaranaGame.Logic
         private Dictionary<string, SimplePool<TarakanViewBase>> _pools = new();
         private SimplePool<TarakanController> _tarakanControllersPool;
 
-        public GameManager(TarakansConfig tarakansConfig, DiContainer container, GameSettingsConfig gameSettingsConfig, GameSettings gameSettings)
+        public GameManager(TarakansConfig tarakansConfig, DiContainer container, GameSettings gameSettings, GameSettingsConfig gameSettingsConfig)
         {
             _tarakansConfig = tarakansConfig;    
             _container = container;
             _gameCamera = Camera.main;
+            gameSettings.InitGameSettingsFromConfig(gameSettingsConfig);
             _tarakanControllersPool = new SimplePool<TarakanController>(null, _tarakansConfig.TarakanControllerPrefab);
         }
         
