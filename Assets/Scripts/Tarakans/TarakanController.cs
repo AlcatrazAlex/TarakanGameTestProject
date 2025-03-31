@@ -26,6 +26,7 @@ namespace TaranaGame.Tarakan
         public TarakanViewBase View => _view;
         public ITarakanState CurrentState => _currentState;
         public string Id => _id;
+        public GameSettings GameSettings => _gameSettings;
         
         public Action OnPointReached;
         
@@ -114,7 +115,7 @@ namespace TaranaGame.Tarakan
             _currentSpeed = Mathf.MoveTowards(_currentSpeed, baseSpeed, acceleration * Time.fixedDeltaTime);
             _rb.linearVelocity = dir * _currentSpeed;
             
-            var dist = (GetOppositeCorner() - new Vector2(transform.position.x, transform.position.y)).sqrMagnitude;
+            var dist = (GetOppositeCorner() - (Vector2)transform.position).sqrMagnitude;
             if (dist <= _gameSettings.FinishDistance * _gameSettings.FinishDistance)
                 FinishTrip();
         }
